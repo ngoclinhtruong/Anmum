@@ -1,0 +1,644 @@
+@font-face {
+  font-family: 'ToyotaText-Regular';
+  src: url('../fonts/ToyotaText-Regular.eot?#iefix') format('embedded-opentype'),
+  		url('../fonts/ToyotaText-Regular.woff') format('woff'),
+   		url('../fonts/ToyotaText-Regular.ttf')  format('truetype'),
+   		url('../fonts/ToyotaText-Regular.svg#ToyotaDisplay-Bold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+  font-family: 'ToyotaText-Bold';
+  src: url('../fonts/ToyotaText-Bold.eot?#iefix') format('embedded-opentype'),
+  		url('../fonts/ToyotaText-Bold.woff') format('woff'),
+   		url('../fonts/ToyotaText-Bold.ttf')  format('truetype'),
+   		url('../fonts/ToyotaText-Bold.svg#ToyotaDisplay-Bold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+  font-family: 'ToyotaDisplay-Bold';
+  src: url('../fonts/ToyotaDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+  		url('../fonts/ToyotaDisplay-Bold.woff') format('woff'),
+   		url('../fonts/ToyotaDisplay-Bold.ttf')  format('truetype'),
+   		url('../fonts/ToyotaDisplay-Bold.svg#ToyotaDisplay-Bold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+.clearfix:after {
+  content:"";
+  clear: both;
+  display: table;
+}
+
+.wpr-macro-micro .wrapper {
+  margin: 0 auto;
+  width: 840px;
+}
+
+.wpr-macro-micro * {
+  color: #68748e;
+  font: 18px 'Barmeno-Regular', sans-serif;
+}
+
+.wpr-macro-micro .bg-diagram {
+  background: #e0d0e5;
+  padding-bottom: 25px;
+  padding-top: 40px;
+}
+
+.wpr-macro-micro .bg-mac-mic-desc {
+  background: #fadae9 url(../images/macro-micro/bg-mom.jpg) center bottom no-repeat;
+  padding-top: 40px;
+  min-height: 820px;
+  position: relative;
+}
+
+.wpr-macro-micro .bg-materna {
+  background: #dbc0f2;
+}
+
+.wpr-macro-micro p {
+  padding-top: 20px;
+}
+
+.wpr-macro-micro p strong {
+  font-family: 'Barmeno-Bold', sans-serif;
+  color: #374c78;
+}
+
+.wpr-macro-micro p.note {
+  font-family: 'Barmeno', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.wpr-macro-micro .title {
+  background: url(../images/macro-micro/logo.png) no-repeat;
+  background-size: 100%;
+  float: left;
+  text-indent: -999em;
+  width: 516px;
+  height: 151px;
+}
+
+.wpr-macro-micro h3 {
+  font: 30px 'PoetsenOne', sans-serif;
+  color: #1c449c;
+}
+
+.wpr-macro-micro .cta-get-sample a {
+  background: url(../images/macro-micro/cta-getsample.png) no-repeat;
+  float: right;
+  display: block;
+  text-indent: -999em;
+  width: 238px;
+  height: 154px;
+}
+
+.wpr-macro-micro .diagram-img {
+  margin-top: 30px;
+  position: relative;
+}
+
+.wpr-macro-micro .diagram-img img {
+  max-width: 100%;
+}
+
+.wpr-macro-micro .diagram-img .macro-img {
+  float: left;
+  width: 45%;
+}
+
+.wpr-macro-micro .diagram-img .probiotic-img {
+  position: absolute;
+  bottom: 65px;
+  left: 45%;
+}
+
+.wpr-macro-micro .diagram-img .micro-img {
+  float: right;
+  width: 45%;
+}
+
+.wpr-macro-micro .bg-mac-mic-desc .wrapper {
+  position: relative;
+  min-height: 820px;
+}
+
+.wpr-macro-micro .mac-mic-desc h4 {
+  color: #603d7c;
+  font: 24px 'PoetsenOne', sans-serif;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs {
+  margin-top: 35px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li {
+  background: url(../images/macro-micro/mac-mic-tabs.png) no-repeat;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  text-indent: -999em;
+  width: 151px;
+  height: 164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(1) {
+  background-position: 0 0;
+  margin: 0
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(1):hover {
+  background-position: 0 -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(1).active {
+  background-position: 0 -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(2) {
+  background-position: -193px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(2):hover {
+  background-position: -193px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(2).active {
+  background-position: -193px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(3) {
+  background-position: -390px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(3):hover {
+  background-position: -390px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(3).active {
+  background-position: -390px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(4) {
+  background-position: -589px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(4):hover {
+  background-position: -589px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(4).active {
+  background-position: -589px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(5) {
+  background-position: -785px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(5):hover {
+  background-position: -785px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(5).active {
+  background-position: -785px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li.active {
+  display: block;
+}
+
+.wpr-macro-micro .mac-mic-desc .tab-content {
+  padding-top: 30px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tab-content p {
+  font-size: 14px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tab-content li {
+  display: none;
+}
+
+.wpr-macro-micro .mac-mic-desc .tab-content li.active {
+  display: block;
+}
+
+/* Bubbles positions */
+.wpr-macro-micro .bubbles label {
+  display: block;
+  text-indent: -999em;
+  position: absolute;
+  z-index: 3;
+}
+
+.wpr-macro-micro .bubbles label.folate {
+  background: url(../images/macro-micro/folate.png) no-repeat;
+  left: 0;
+  bottom: 70px;
+  width: 147px;
+  height: 147px;
+}
+
+.wpr-macro-micro .bubbles label.folate:hover {
+  background: url(../images/macro-micro/folate-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.iron {
+  background: url(../images/macro-micro/iron.png) no-repeat;
+  left: 140px;
+  bottom: 60px;
+  width: 171px;
+  height: 171px;
+}
+
+.wpr-macro-micro .bubbles label.iron:hover {
+  background: url(../images/macro-micro/iron-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.vit-b12 {
+  background: url(../images/macro-micro/vit-b12.png) no-repeat;
+  left: 530px;
+  bottom: 60px;
+  width: 169px;
+  height: 169px;
+}
+
+.wpr-macro-micro .bubbles label.vit-b12:hover {
+  background: url(../images/macro-micro/vit-b12-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.fats {
+  background: url(../images/macro-micro/fats.png) no-repeat;
+  left: -40px;
+  bottom: 80px;
+  width: 139px;
+  height: 139px;
+}
+
+.wpr-macro-micro .bubbles label.fats:hover {
+  background: url(../images/macro-micro/fats-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.carbohydrate {
+  background: url(../images/macro-micro/carbohydrate.png) no-repeat;
+  left: 140px;
+  bottom: 60px;
+  width: 190px;
+  height: 190px;
+}
+
+.wpr-macro-micro .bubbles label.carbohydrate:hover {
+  background: url(../images/macro-micro/carbohydrate-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.vit-bs {
+  background: url(../images/macro-micro/vit-bs.png) no-repeat;
+  left: 510px;
+  bottom: 80px;
+  width: 157px;
+  height: 157px;
+}
+
+.wpr-macro-micro .bubbles label.vit-bs:hover {
+  background: url(../images/macro-micro/vit-bs-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.vit-d {
+  background: url(../images/macro-micro/vit-d.png) no-repeat;
+  left: 0;
+  bottom: 80px;
+  width: 136px;
+  height: 136px;
+}
+
+.wpr-macro-micro .bubbles label.vit-d:hover {
+  background: url(../images/macro-micro/vit-d-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.calcium {
+  background: url(../images/macro-micro/calcium.png) no-repeat;
+  left: 140px;
+  bottom: 60px;
+  width: 171px;
+  height: 171px;
+}
+
+.wpr-macro-micro .bubbles label.calcium:hover {
+  background: url(../images/macro-micro/calcium-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.magnesium {
+  background: url(../images/macro-micro/magnesium.png) no-repeat;
+  left: 510px;
+  bottom: 80px;
+  width: 184px;
+  height: 184px;
+}
+
+.wpr-macro-micro .bubbles label.magnesium:hover {
+  background: url(../images/macro-micro/magnesium-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.zinc {
+  background: url(../images/macro-micro/zinc.png) no-repeat;
+  left: -40px;
+  bottom: 80px;
+  width: 138px;
+  height: 138px;
+}
+
+.wpr-macro-micro .bubbles label.zinc:hover {
+  background: url(../images/macro-micro/zinc-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.vitamin-a {
+  background: url(../images/macro-micro/vitamin-a.png) no-repeat;
+  left: 190px;
+  bottom: 80px;
+  width: 142px;
+  height: 142px;
+}
+
+.wpr-macro-micro .bubbles label.vitamin-a:hover {
+  background: url(../images/macro-micro/vitamin-a-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.dha {
+  background: url(../images/macro-micro/dha.png) no-repeat;
+  left: 150px;
+  bottom: -20px;
+  width: 156px;
+  height: 156px;
+}
+
+.wpr-macro-micro .bubbles label.dha:hover {
+  background: url(../images/macro-micro/dha-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.gar {
+  background: url(../images/macro-micro/gar.png) no-repeat;
+  left: 20px;
+  bottom: 0px;
+  width: 157px;
+  height: 153px;
+}
+
+.wpr-macro-micro .bubbles label.gar:hover {
+  background: url(../images/macro-micro/gar-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.protein {
+  background: url(../images/macro-micro/protein.png) no-repeat;
+  left: 510px;
+  bottom: 80px;
+  width: 147px;
+  height: 148px;
+}
+
+.wpr-macro-micro .bubbles label.protein:hover {
+  background: url(../images/macro-micro/protein-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.folate2 {
+  background: url(../images/macro-micro/folate2.png) no-repeat;
+  left: 560px;
+  bottom: 10px;
+  width: 131px;
+  height: 131px;
+}
+
+.wpr-macro-micro .bubbles label.folate2:hover {
+  background: url(../images/macro-micro/folate2-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.probiotic {
+  background: url(../images/macro-micro/probiotic.png) no-repeat;
+  left: 70px;
+  bottom: 140px;
+  width: 157px;
+  height: 157px;
+}
+
+.wpr-macro-micro .bubbles label.probiotic:hover {
+  background: url(../images/macro-micro/probiotic-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.fibre {
+  background: url(../images/macro-micro/fibre.png) no-repeat;
+  left: 470px;
+  bottom: 140px;
+  width: 156px;
+  height: 156px;
+}
+
+.wpr-macro-micro .bubbles label.fibre:hover {
+  background: url(../images/macro-micro/fibre-hv.png) no-repeat;
+}
+
+/* Bubble descriptions positions */
+.wpr-macro-micro .bubbles label.folate + .desc {
+  left: 45px;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.iron + .desc {
+  left: 200px;
+  bottom: 200px;
+}
+
+.wpr-macro-micro .bubbles label.vit-b12 + .desc {
+  left: 555px;
+  bottom: 195px;
+}
+
+.wpr-macro-micro .bubbles label.folate + .desc {
+  left: 45px;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.iron + .desc {
+  left: 200px;
+  bottom: 200px;
+}
+
+.wpr-macro-micro .bubbles label.vit-b12 + .desc {
+  left: 555px;
+  bottom: 195px;
+}
+
+.wpr-macro-micro .bubbles label.fats + .desc {
+  left: 0;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.carbohydrate + .desc {
+  left: 210px;
+  bottom: 225px;
+}
+
+.wpr-macro-micro .bubbles label.vit-bs + .desc {
+  left: 560px;
+  bottom: 210px;
+}
+
+.wpr-macro-micro .bubbles label.vit-d + .desc {
+  left: 40px;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.calcium + .desc {
+  left: 198px;
+  bottom: 205px;
+}
+
+.wpr-macro-micro .bubbles label.magnesium + .desc {
+  left: 575px;
+  bottom: 240px;
+}
+
+.wpr-macro-micro .bubbles label.zinc + .desc {
+  left: 5px;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.vitamin-a + .desc {
+  left: 235px;
+  bottom: 200px;
+}
+
+.wpr-macro-micro .bubbles label.dha + .desc {
+  left: 200px;
+  bottom: 115px;
+}
+
+.wpr-macro-micro .bubbles label.gar + .desc {
+  left: 70px;
+  bottom: 130px;
+}
+
+.wpr-macro-micro .bubbles label.protein + .desc {
+  left: 560px;
+  bottom: 205px;
+}
+
+.wpr-macro-micro .bubbles label.folate2 + .desc {
+  left: 600px;
+  bottom: 115px;
+}
+
+.wpr-macro-micro .bubbles label.probiotic + .desc {
+  left: 120px;
+  bottom: 270px;
+}
+
+.wpr-macro-micro .bubbles label.fibre + .desc {
+  left: 520px;
+  bottom: 275px;
+}
+
+.wpr-macro-micro .bubbles .desc.purple .content{
+  background: #965a94;
+}
+
+.wpr-macro-micro .bubbles .desc.purple .arrow {
+  border-top-color: #965a94;
+}
+
+.wpr-macro-micro .bubbles .desc.pink .content{
+  background: #e8618d;
+}
+
+.wpr-macro-micro .bubbles .desc.pink .arrow {
+  border-top-color: #e8618d;
+}
+
+.wpr-macro-micro .bubbles .desc {
+  display: none;
+  position: absolute;
+  width: 280px;
+  z-index: 5;
+}
+
+.wpr-macro-micro .bubbles .desc.active {
+  display: block;
+}
+
+.wpr-macro-micro .bubbles .desc .content {
+  background: #00819c;
+  padding: 15px;
+}
+
+.wpr-macro-micro .bubbles .desc .arrow {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #00819c;
+  width: 0;
+  height: 0;
+  margin-left: 15px;
+}
+
+.wpr-macro-micro .bubbles .desc h5 {
+  font-family: 'Barmeno-Bold', sans-serif;
+}
+
+.wpr-macro-micro .bubbles .desc p,
+.wpr-macro-micro .bubbles .desc h5 {
+  color: white;
+  font-size: 11px;
+}
+
+.wpr-macro-micro .bubbles .desc p {
+  padding-top: 10px;
+}
+
+.wpr-macro-micro .bubbles .desc p.note {
+  font-style: normal;
+  font-size: 9px;
+}
+
+.wpr-macro-micro .materna {
+  padding-top: 10px;
+}
+
+.wpr-macro-micro .materna .intro {
+  float: left;
+  width: 455px;
+}
+
+.wpr-macro-micro .materna h3 {
+  margin-top: 20px;
+}
+
+.wpr-macro-micro .materna .img {
+  float: right;
+  width: 340px;
+}
+
+.wpr-macro-micro .materna .cta-request-sample a {
+  background: url('../images/macro-micro/cta-request-sample.png') 0 0 no-repeat;
+  display: block;
+  margin-top: 15px;
+  text-indent: -999em;
+  width: 161px;
+  height: 40px;
+}
+
+.wpr-macro-micro .materna .cta-request-sample a:hover {
+  background-position: 0 -45px;
+}
+
+@media (max-width: 850px) {
+  .wpr-macro-micro .wrapper {
+    width: 748px;
+  }
+
+  .wpr-macro-micro .title {
+    width: 60%;
+  }
+}
