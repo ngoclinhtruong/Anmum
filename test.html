@@ -1,0 +1,597 @@
+<link href="http://www.anmum.com.my/wp-content/themes/anmum/css/noAddedSugars.css" rel="stylesheet">
+<link href="http://www.anmum.com.my/wp-content/themes/anmum/css/style.css" type="text/css" rel="stylesheet">
+
+<script src="http://www.anmum.com.my/wp-content/themes/anmum/js/jquery.2.1.3.min.js"></script>
+<script src="http://www.anmum.com.my/wp-content/themes/anmum/js/script.js"></script>
+
+<style>
+ #curiousKidVideo{
+ 	width: 100%;
+ 	height:280px;
+ }
+</style>
+
+<script type="text/javascript">//<![CDATA[
+$(document).ready(function(){
+
+	var topBarPos = $('#top_bar').offset().top;
+	var navBarPos = $('#nav_bar').offset().top - 50;
+	var sec2Pos = $('.sec2').offset().top;
+	var sec3Pos = $('.sec3').offset().top;
+
+	$(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the
+      //nav bar to stick.
+      //console.log($(window).scrollTop());
+
+    if ($(window).scrollTop() >  topBarPos) {
+    	//console.log($(window).scrollTop(),$('#top_bar').offset().top);
+      $('#top_bar').addClass('topbar-fixed');
+    }
+    if ($(window).scrollTop() < topBarPos) {
+      $('#top_bar').removeClass('topbar-fixed');
+    }
+    if ($(window).scrollTop() > navBarPos) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < navBarPos) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
+
+	$('.navCta1').click(function(){
+		scrollToElement( $('.scrollNavi2'), 100, 300 );
+	})
+	$('.navCta2').click(function(){
+		scrollToElement( $('.scrollNavi3'), 100, 300 );
+	})
+	$('.navCta3').click(function(){
+		scrollToElement( $('.scrollNavi4'), 100, 300 );
+	})
+	$('.navCta4').click(function(){
+		scrollToElement( $('.scrollNavi5'), 100, 300 );
+	})
+	$('.ctaBackToTop').click(function(){
+		scrollToElement( $('.scrollBackToTop'), 100, 300 );
+	})
+
+	function scrollToElement(element, topOffset, duration) {
+		var fromTop = topOffset || 0; // set from top offset
+        var duration = duration || 500; // duration of the animation
+        $('html, body').animate({scrollTop: element.offset().top - fromTop}, duration);
+	}
+
+	$('.navbar-inner li:first-child').on('click', function(){
+	   $(this).parent().toggleClass('open');
+	});
+	$('.navbar-inner li a').on('click', function(e){
+		e.preventDefault();
+	   $(this).closest('ul').removeClass('open');
+	});
+
+ 	sectionHighlight();
+    function sectionHighlight(){
+        $(window).scroll(function() {
+            var position = $(this).scrollTop();
+
+				//console.log(position);
+            $('.spottingAddedSugar-container section').each(function() {
+                var target = $(this).offset().top - 110;
+                var className = $(this).data('cat');
+                var targetTxt = $(this).data('title');
+                // console.log(className);
+                if (position >= target) {
+                    $('.sticky-menu-wrapper > ul > li > a').removeClass('selected');
+					$('.sticky-menu-wrapper > ul > li > a[href="' + className + '"]').addClass('selected');
+                    $('.sticky-menu-wrapper h4').text( targetTxt );
+                } else if(position < $('.sec2').offset().top - 100 ){
+                    $('.sticky-menu-wrapper h4').text( 'Please Choose' );
+                } else if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				        $('.sticky-menu-wrapper > ul > li > a').removeClass('selected');
+						$('.sticky-menu-wrapper > ul > li > a[href="sec5"]').addClass('selected');
+						$('.sticky-menu-wrapper h4').text( targetTxt );
+				    }
+            });
+        });
+    }
+
+});
+
+</script>
+
+<script>
+//set video values
+var video = 'HhP6tMCgJ-0'
+video.h = '280'
+video.w = '100%'
+var player;
+var tag = document.createElement('script');
+tag.src = 'http://www.youtube.com/player_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player('curiousKidVideo', {
+        height: video.h,
+        width: video.w,
+        videoId: video,
+        events: {
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError
+        }
+    });
+}
+
+console.log(YT.PlayerState.UNSTARTED);
+
+function onPlayerStateChange(event) {
+    switch (event.data) {
+        case YT.PlayerState.UNSTARTED:
+        console.log('video not yet start');
+
+        break;
+        case YT.PlayerState.PLAYING:
+            if (cleanTime() == 0) {
+				console.log('video is starting');
+				ga('send', 'event', 'Whatsinthemilk | Curious kid', 'watch', 'curious kid video', video);
+
+                dataLayer.push({
+                    'event': 'youtubeChange',
+                    'eventCategory': 'video',
+                    'eventAction': 'started',
+                    'eventLabel': video
+                });
+            } else {
+                dataLayer.push({
+                    'event': 'youtubeChange',
+                    'eventCategory': 'video',
+                    'eventAction': 'played',
+                    'eventLabel': 'v: ' + video + ' | t: ' + cleanTime()
+                });
+            };
+            break;
+        case YT.PlayerState.PAUSED:
+            if (player.getDuration() - player.getCurrentTime() != 0) {
+                dataLayer.push({
+                    'event': 'youtubeChange',
+                    'eventCategory': 'video',
+                    'eventAction': 'paused',
+                    'eventLabel': 'v: ' + video + ' | t: ' + cleanTime()
+                });
+            };
+            break;
+        case YT.PlayerState.ENDED:
+            dataLayer.push({
+                'event': 'youtubeChange',
+                'eventCategory': 'video',
+                'eventAction': 'ended',
+                'eventLabel': video
+            });
+            break;
+    };
+};
+
+function onPlayerError(event) {
+    switch (event.data) {
+        case 2:
+            dataLayer.push({
+                'event': 'youtubeChange',
+                'eventCategory': 'video',
+                'eventAction': 'invalid id',
+                'eventLabel': video
+            })
+            break;
+        case 100:
+            dataLayer.push({
+                'event': 'youtubeChange',
+                'eventCategory': 'video',
+                'eventAction': 'not found',
+                'eventLabel': video
+            })
+            break;
+        case 101 || 150:
+            dataLayer.push({
+                'event': 'youtubeChange',
+                'eventCategory': 'video',
+                'eventAction': 'not allowed',
+                'eventLabel': video
+            })
+            break;
+    };
+};
+
+function cleanTime() {
+    return Math.round(player.getCurrentTime())
+};
+</script>
+
+
+<div class="header"></div>
+
+<div class="spottingAddedSugar-container scrollBackToTop">
+	<div class="container">
+		<a href="http://www.anmum.com.my/request-for-sample/?utm_source=AnmumWebsite&utm_medium=CuriousKid&utm_content=WhatsInTheMilk&utm_campaign=NoAddedSugars-phase1" target="_blank">
+			<div class="top-bar" id="top_bar">Free Sample of Anmum&trade; <br class="visible-xs">Essential with No Added Sugars*!
+				<div class="freeEssentialSample"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/free_sample.png"></div>
+			</div>
+		</a>
+		<div class="container-header">
+			<div class="topKid"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/top-kid.png" alt="kid"></div>
+			<div class="whatsIntheMilk"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/whats-in-the-milk.png"></div>
+		</div>
+
+		<div class="sec1 safe-area">
+			<div class="row">
+				<div class="col-sm-7 col-xs-12">
+					<div id="curiousKidVideo"></div>
+				</div>
+				<div class="col-sm-5 col-xs-12">
+					<div class="title">
+						Could there really be<br>
+						added sugars* in<br>
+						my child's milk?
+					</div>
+					<p>Are all milk the same? Worry not, we're here to answer these questions and help you make informed choices for your little one!</p>
+
+					<p>With Anmum&trade; Essential, you can be sure that your child not only gets all the important nutrients like <span class="gothamBold">GA&reg;</span> and <span class="gothamBold">DHA</span>, but it also contains <span class="gothamBold">No Added Sugars*</span>. </p>
+				</div>
+			</div>
+		</div>
+
+		<section class="sec2" data-cat="sec2" data-title="What are Added Sugars*?">
+			<div class="container-sec2">
+
+					<div class="navbar-inner sticky-menu-wrapper sticky" id="nav_bar">
+					   <ul class="clearfix" data-topbar="" role="navigation">
+							<li class=""><h4>Please Choose</h4><span class="navi-arrow"></span></li>
+							<li class="navCta1"><a href="sec2" class="selected" onClick="ga('send','event','Whatsinthemilk | Curious kid','click','what are added sugars?');">What are <br class="hidden-xs">Added Sugars*?</a></li>
+							<li class="navCta2"><a href="sec3" onClick="ga('send','event','Whatsinthemilk | Curious kid','click','check your labels');">Check <br class="hidden-xs">Your Labels</a></li>
+							<li class="navCta3"><a href="sec4" onClick="ga('send','event','Whatsinthemilk | Curious kid','click','sweet facts');">Sweet Facts</a></li>
+							<li class="navCta4"><a href="sec5" onClick="ga('send','event','Whatsinthemilk | Curious kid','click','switching plan');">Switching Plan</a></li>
+					   </ul>
+					</div>
+
+				<div class="safe-area scrollNavi2">
+					<div class="row">
+						<div class="col-sm-3 col-xs-12">
+							<div class="sec2-object1"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec2-object1.png"></div>
+						</div>
+						<div class="col-sm-9 col-xs-12">
+							<div class="title mobi-padding0">
+								What are Added Sugars*?
+							</div>
+							<p>In most foods and drinks, you'll find two types of sugar -</p>
+							<div class="row">
+								<div class="col-sm-4 col-xs-12 gothamBold sub-title">naturally-occuring <br>sugars<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec2-object3.png" alt="fruits" class="sub-title-img1"></div>
+								<div class="col-sm-4 col-xs-12 gothamBold sub-title">added <br class="hidden-xs">sugars*.<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec2-object4.png" alt="ice-cream" class="sub-title-img2"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-xs-12">
+							<div class="sec2-object2"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec2-object2.png"></div>
+						</div>
+						<div class="col-sm-9 col-xs-12">
+							<h4 class="txtpurple gothamBold mobi-padding0">What's the difference?</h4>
+							<p>Simply put, added sugars* are types of sugars and syrups added to food and drinks when they're being processed or prepared. This doesn't include naturally-occuring sugars such as those in milk and fruits! <sup>1</sup></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="sec2-box">
+								<h4 class="txtpurple gothamBold ">Did You Know?</h4>
+								<p class="txtpurple">Lactose is a type of natural sugar that is found in milk and dairy products. <br>
+								But if you find lactose listed in the ingredients list, it is being added into the product!</p>
+								<div class="sec2-object5"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec2-object5.png"></div>
+								<div class="sec2-object6"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec2-object6.png"></div>
+							</div>
+							<div class="sec2-tnc">
+								<p>* Sucrose, Glucose Syrup Solid, Corn Syrup Solid, Brown Sugar, Dextrose, Lactose, Fructose, Honey and White Sugar are defined as 'sugars' and 'added sugars' under CODEX Standard 212-1999 and CAC/GL23-1997. CODEX develops harmonised international food standards guidelines and code of practices. Under Malaysian Food Regulations 1985, Sucrose, Brown Sugar, Dextrose, Glucose, Fructose, Honey are defined as sweetening substances. Under Australia New Zealand Food Standard Code-Standard 1.1.2, Glucose Syrup, Maltodextrin and similar products are defined as 'sugars'.</p>
+								<p class="margin0">1.USDA (2016). What are added sugars? Retrieved from http://www.choosemyplate.gov/what-are-added-sugars</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sugar">
+				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sugar.png">
+			</div>
+		</section>
+
+		<section class="sec3 safe-area scrollNavi3" data-cat="sec3" data-title="Check Your Labels">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title visible-xs">
+						Identify Different Added Sugars* in 2 easy steps!
+					</div>
+					<div class="sec3ImgTitle hidden-xs">
+						<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec3-title.png">
+					</div>
+					<div class="sec3-object1">
+						<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec3-object1.png">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12"><span class="gothamBold txtpurple step">Step 1</span><br>
+					<p>Look at the <span class="gothamBold ">'Ingredients'</span> <br class="visible-xs">section on the product label.</p>
+				</div>
+				<div class="col-xs-12"><span class="gothamBold txtpurple step">Step 2</span><br>
+					<p>Added sugars* can have many names!<br>
+					Identify some of the common ones with our handy list below, or sing along to our music video!</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<iframe width="100%" height="250" src="https://www.youtube.com/embed/bIiXywHPbUQ" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<div class="sec3-object2">
+						<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec3-object2.png">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="sec3-object3">
+						<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec3-object3.png">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sec4 safe-area scrollNavi4" data-cat="sec4" data-title="Sweet Facts">
+			<div class="row">
+				<div class="col-sm-3 col-xs-12">
+					<div class="sec4-object1"><img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-object1.png"></div>
+				</div>
+				<div class="col-sm-9 col-xs-12">
+					<div class="title">
+						Sweet Facts
+					</div>
+					<p>Let's get sugar-savvy!<br>
+						Click on the buttons below to learn about our Sweet Facts!
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading panel-heading1 accordion-bg1">
+							<h4 class="panel-title panel-title1 accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							   <a>
+								#1 How Much is Too Much?
+							   </a>
+							</h4>
+							<div class="sec4-object2">
+								<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-object2.png">
+							</div>
+						</div>
+					 <div id="collapseOne" class="panel-collapse collapse in">
+					   <div class="panel-body panel-body1">
+					     <div class="col-xs-12">
+					     		<p>The Malaysian Dietary Guidelines (MDG) for Children and Adolescents 2013 recommend that: </p>
+					     </div>
+					     <div class="col-sm-5 col-xs-12">
+					     		<div class="row">
+					     			<div class="col-sm-4 col-xs-12">
+					     				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion1-object1.png">
+					     			</div>
+					     			<div class="col-sm-8 col-xs-12">
+					     				<p>Kids <span class="gothamBold">aged 2-6</span> should have no more than <span class="gothamBold">3 teaspoons of added sugars per day</span>!</p>
+									</div>
+					     		</div>
+					     </div>
+					     <div class="col-sm-7 col-xs-12">
+					     		<div class="row">
+					     			<div class="col-sm-4 col-xs-12">
+					     				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion1-object2.png">
+					     			</div>
+					     			<div class="col-sm-8 col-xs-12">
+					     				<p>Kids <span class="gothamBold">aged 7-10</span> should have no more than <span class="gothamBold">4 teaspoons of added sugars per day</span>!</p>
+					     			</div>
+					     		</div>
+					     </div>
+					   </div>
+					 </div>
+					</div>
+				   <div class="panel panel-default">
+						<div class="panel-heading panel-heading2 accordion-bg2">
+							<h4 class="panel-title panel-title2 accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+							   <a>
+								#2 Common Sources of Added Sugars*
+							   </a>
+							</h4>
+							<div class="sec4-object3">
+								<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-object3.png">
+							</div>
+						</div>
+				    	<div id="collapseTwo" class="panel-collapse collapse">
+					      <div class="panel-body panel-body2">
+					       	<div class="row container-flex">
+					       		<div class="col-sm-3 col-xs-12 txtalignc">
+					       			<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion2-object1.png"><br>
+					       			<p>Soft drinks, fruit drinks, sport drinks, energy drinks</p>
+					       		</div>
+					       		<div class="col-sm-3 col-xs-12 txtalignc">
+					       			<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion2-object2.png"><br>
+					       			<p>Sauces - pasta sauce, barbecue sauce, ketchup, salad dressing</p>
+					       		</div>
+					       		<div class="col-sm-3 col-xs-12 txtalignc">
+					       			<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion2-object3.png"><br>
+					       			<p>Sugary cereals, candies, cakes, cookies</p>
+					       		</div>
+					       		<div class="col-sm-3 col-xs-12 txtalignc">
+					       			<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion2-object4.png"><br>
+					       			<p>Dried fruits and canned fruits</p>
+					       		</div>
+					       	</div>
+					      </div>
+				    	</div>
+				   </div>
+				  	<div class="panel panel-default">
+					   <div class="panel-heading panel-heading1 accordion-bg3">
+					      <h4 class="panel-title panel-title1 accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+					         <a>
+					         #3 Why Excessive Sugar is Bad
+					         </a>
+					      </h4>
+					      <div class="sec4-object4">
+								<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-object4.png">
+							</div>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse">
+					      <div class="panel-body panel-body3">
+					      	<div class="row container-flex">
+					       		<div class="col-sm-4 col-xs-12 txtalignc">
+					       			<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion3-object1.png"><br>
+					       			<p>Increase likelihood of obesity</p>
+					       		</div>
+					       		<div class="col-sm-4 col-xs-12 txtalignc">
+					       			<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion3-object2.png"><br>
+					       			<p>Impact on Taste Preference - Sweet Tooth</p>
+					       		</div>
+					       		<div class="col-sm-4 col-xs-12 txtalignc">
+					       			<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion3-object3.png"><br>
+					       			<p>Increase Risk of Dental Cavities</p>
+					       		</div>
+					       	</div>
+					      </div>
+					   </div>
+				  	</div>
+				  	<div class="panel panel-default">
+					   <div class="panel-heading panel-heading2 accordion-bg4">
+					      <h4 class="panel-title panel-title2 accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+					         <a>
+								#4 Tips to Reduce Added Sugars Intake
+					         </a>
+					      </h4>
+					      <div class="sec4-object5">
+								<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-object5.png">
+							</div>
+					    </div>
+					    <div id="collapseFour" class="panel-collapse collapse">
+					      <div class="panel-body">
+					        	<div class="row paddingTop10">
+					       		<div class="col-xs-2">
+					       			<div class="tip">
+					       				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/tip1.png">
+					       			</div>
+					       		</div>
+					       		<div class="col-xs-10">
+					       			<div class="gothamBold txtpurple step">Smarter Shopping Choices</div>
+										<p>Look out for labels like <br>
+										<span class="gothamBold">"Low Sugar"</span>, <span class="gothamBold">"Sugar-free"</span> and <span class="gothamBold">"No Added Sugar*"</span>.</p>
+										<div class="tip1-box">
+											<ul>
+												<li>
+													<span class="gothamBold">Low Sugar</span>
+													<p>No more than 5g of sugar per 100g, or 2.5g of sugar per 100ml.  <sup>2</sup></p>
+												</li>
+												<li>
+													<span class="gothamBold">Sugar-free</span>
+													<p>No more than 0.5g of sugar per 100g/100ml.<sup>2</sup></p>
+												</li>
+												<li>
+													<span class="gothamBold">No Added Sugars*</span>
+													<p>No sugars, sugar-containing ingredients or other ingredients that increase the sugar content of the food is added. <sup>3</sup></p>
+												</li>
+											</ul>
+										</div>
+										<div class="sec4-tnc">
+											<ol start="2">
+												<li>Malaysia Food Act 1983 (ACT 281) &amp; Regulations (as at 15th August 2013). Regulation 18c. </li>
+												<li>Codex Alimentarius (1997). Guidelines for use of nutrition and health claims (CAC/GL 23-1997, Rev. 2013): Non-Addition Claims (7.1 Non-addition of sugars).</li>
+											</ol>
+										</div>
+					       		</div>
+					       	</div>
+
+					       	<div class="row paddingTop10">
+					       		<div class="col-xs-2">
+					       			<div class="tip">
+					       				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/tip2.png">
+					       			</div>
+					       		</div>
+					       		<div class="col-sm-7 col-xs-10">
+					       			<div class="gothamBold txtpurple step">Fruity Substitutes</div>
+										<p>Gradually replace added sugars* in your kid's diet with <span class="gothamBold"> fruits, vegetables and whole grains.</span></p>
+					       		</div>
+					       		<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-2">
+					       			<div class="sec4-accordion4-object1">
+					       				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion4-object1.png">
+					       			</div>
+					       		</div>
+					       	</div>
+
+					       	<div class="row paddingTop10">
+					       		<div class="col-xs-2">
+					       			<div class="tip">
+					       				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/tip3.png">
+					       			</div>
+					       		</div>
+					       		<div class="swap-column">
+						       		<div class="col-sm-2 col-xs-10">
+						       			<div class="sec4-accordion4-object2">
+						       				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion4-object2.png">
+						       			</div>
+						       		</div>
+						       		<div class="col-sm-8 col-xs-10">
+						       			<div class="gothamBold txtpurple step">The Quarter Rule</div>
+											<p>Use <span class="gothamBold">25% less sugar</span> than you normally would in your cooking to help your child get used to less sugar.</p>
+						       		</div>
+						       	</div>
+					       	</div>
+
+					       	<div class="row paddingTop10">
+					       		<div class="col-xs-2">
+					       			<div class="tip">
+					       				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/tip4.png">
+					       			</div>
+					       		</div>
+					       		<div class="col-sm-7 col-xs-10">
+					       			<div class="gothamBold txtpurple step">Be a Role Model</div>
+										<p><span class="gothamBold">Kids are natural mimics -</span><br>
+											so show your little one that mummy and daddy are also taking less added sugars*!
+										</p>
+					       		</div>
+					       		<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-2">
+					       			<div class="sec4-accordion4-object3">
+					       				<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec4-accordion4-object3.png">
+					       			</div>
+					       		</div>
+					       	</div>
+
+					      </div>
+					   </div>
+				  	</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sec5 safe-area scrollNavi5" data-cat="sec5" data-title="Switching Plan">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<div class="title">
+						Switch to <br>
+						Anmum&trade; Essential
+					</div>
+					<p>You can be sure that your child receives more than just the important nutrients like <span class="gothamBold">DHA</span> and <span class="gothamBold">GA&reg;</span> – because it contains <span class="gothamBold">No Added Sugars*</span>.
+					</p>
+					<p>To get your little one accustomed to our formula, it’s best to ease them into it gradually with the following steps. Feel free to adapt accordingly to your child’s needs.
+					</p>
+				</div>
+				<div class="col-sm-6 col-xs-12 sec5-object1">
+					<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec5-object1.png" class="hidden-xs">
+					<img src="http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/spotting-added-sugars/sec5-object1-mobi.png" class="visible-xs">
+				</div>
+				<div class="col-xs-12">
+					<div class="backToTop ctaBackToTop"></div>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+</div>

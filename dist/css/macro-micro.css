@@ -1,0 +1,1322 @@
+#mySwipe p.macro-micro-intro,
+#mySwipe p.curiousKidDeck {
+  margin-top: 140px;
+  width: 380px;
+}
+
+.link-js-css br {
+  display: none;
+}
+
+.clearfix:after {
+  content:"";
+  clear: both;
+  display: table;
+}
+
+.wpr-macro-micro {
+  margin-top: 30px;
+}
+
+.wpr-macro-micro .wrapper {
+  margin: 0 auto;
+  width: 840px;
+}
+
+.wpr-macro-micro * {
+  color: #68748e;
+  font-size:16px;
+}
+
+.wpr-macro-micro p:empty,
+.wpr-macro-micro .note br,
+.entry-content p:empty {
+  display: none;
+}
+
+.wpr-macro-micro sub {
+  font-size: 8px;
+  color: white;
+  vertical-align: text-bottom;
+}
+
+.wpr-macro-micro h2,
+.wpr-macro-micro h3,
+.wpr-macro-micro h4,
+.wpr-macro-micro h5 {
+  margin: 0;
+}
+
+.wpr-macro-micro .bg-diagram {
+  background: #e0d0e5;
+  padding-bottom: 25px;
+  padding-top: 40px;
+}
+
+.wpr-macro-micro .bg-mac-mic-desc {
+  background: #fadae9 url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/bg-mom.jpg) center bottom no-repeat;
+  padding-top: 40px;
+  height: 820px;
+  position: relative;
+}
+
+.wpr-macro-micro .bg-materna {
+  background: #dbc0f2;
+  padding-bottom: 30px;
+}
+
+.wpr-macro-micro p {
+  padding-top: 20px;
+  margin: 0;
+}
+
+.wpr-macro-micro p strong {
+  font-weight: bold;
+  color: #374c78;
+}
+
+.wpr-macro-micro .note p {
+  font-size: 14px;
+  font-style: italic;
+  padding: 0;
+}
+
+.wpr-macro-micro .title {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/logo.png) no-repeat;
+  background-size: 100%;
+  float: left;
+  text-indent: -999em;
+  width: 516px;
+  height: 151px;
+}
+
+.wpr-macro-micro h3 {
+  font-family: 'Poetsen One';
+  font-size: 30px;
+  color: #1c449c;
+}
+
+.wpr-macro-micro .cta-get-sample a {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/cta-getsample.png) no-repeat;
+  float: right;
+  display: block;
+  text-indent: -999em;
+  width: 238px;
+  height: 154px;
+}
+
+.wpr-macro-micro .diagram-img {
+  margin-top: 30px;
+  position: relative;
+}
+
+.wpr-macro-micro img {
+  max-width: 100%;
+}
+
+.wpr-macro-micro .diagram-img .macro-img {
+  float: left;
+  width: 45%;
+}
+
+.wpr-macro-micro .diagram-img .probiotic-img {
+  position: absolute;
+  bottom: 65px;
+  left: 45%;
+}
+
+.wpr-macro-micro .diagram-img .micro-img {
+  float: right;
+  width: 45%;
+}
+
+.wpr-macro-micro .bg-mac-mic-desc .wrapper {
+  position: relative;
+  min-height: 820px;
+  overflow: hidden;
+}
+
+.wpr-macro-micro .mac-mic-desc h4 {
+  color: #603d7c;
+  font: 24px 'Poetsen One', sans-serif;
+}
+
+.wpr-macro-micro .mac-mic-desc li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs {
+  margin-top: 35px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/mac-mic-tabs.png) no-repeat;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  text-indent: -999em;
+  width: 151px;
+  height: 154px;
+  border-radius: 80px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li.active {
+  height: 164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(1) {
+  background-position: 0 0;
+  margin: 0
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(1):hover {
+  background-position: 0 -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(1).active {
+  background-position: 0 -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(2) {
+  background-position: -193px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(2):hover {
+  background-position: -193px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(2).active {
+  background-position: -193px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(3) {
+  background-position: -390px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(3):hover {
+  background-position: -390px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(3).active {
+  background-position: -390px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(4) {
+  background-position: -589px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(4):hover {
+  background-position: -589px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(4).active {
+  background-position: -589px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(5) {
+  background-position: -785px 0;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(5):hover {
+  background-position: -785px -164px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li:nth-child(5).active {
+  background-position: -785px -328px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tabs li.active {
+  display: block;
+}
+
+.wpr-macro-micro .mac-mic-desc .tab-content p,
+.wpr-macro-micro .mac-mic-desc .tab-content p strong {
+  font-size: 14px;
+}
+
+.wpr-macro-micro .mac-mic-desc .tab-content li {
+  display: none;
+}
+
+.wpr-macro-micro .mac-mic-desc .tab-content li.active {
+  display: block;
+}
+
+/* Bubbles positions */
+.wpr-macro-micro .bubbles label {
+  display: block;
+  text-indent: -999em;
+  position: absolute;
+  z-index: 3;
+}
+
+.wpr-macro-micro .bubbles label:focus {
+  outline: none;
+}
+
+.wpr-macro-micro .bubbles label.folate {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/folate.png) no-repeat;
+  left: 0;
+  bottom: 70px;
+  width: 147px;
+  height: 147px;
+}
+
+.wpr-macro-micro .bubbles label.folate:hover,
+.wpr-macro-micro .bubbles label.folate.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/folate-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.iron {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/iron.png) no-repeat;
+  left: 140px;
+  bottom: 60px;
+  width: 171px;
+  height: 171px;
+}
+
+.wpr-macro-micro .bubbles label.iron:hover,
+.wpr-macro-micro .bubbles label.iron.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/iron-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.vit-b12 {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vit-b12.png) no-repeat;
+  left: 530px;
+  bottom: 60px;
+  width: 169px;
+  height: 169px;
+}
+
+.wpr-macro-micro .bubbles label.vit-b12:hover,
+.wpr-macro-micro .bubbles label.vit-b12.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vit-b12-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.fats {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/fats.png) no-repeat;
+  left: 0;
+  bottom: 80px;
+  width: 139px;
+  height: 139px;
+}
+
+.wpr-macro-micro .bubbles label.fats:hover,
+.wpr-macro-micro .bubbles label.fats.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/fats-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.carbohydrate {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/carbohydrate.png) no-repeat;
+  left: 140px;
+  bottom: 60px;
+  width: 190px;
+  height: 190px;
+}
+
+.wpr-macro-micro .bubbles label.carbohydrate:hover,
+.wpr-macro-micro .bubbles label.carbohydrate.active  {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/carbohydrate-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.vit-bs {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vit-bs.png) no-repeat;
+  left: 510px;
+  bottom: 80px;
+  width: 157px;
+  height: 157px;
+}
+
+.wpr-macro-micro .bubbles label.vit-bs:hover,
+.wpr-macro-micro .bubbles label.vit-bs.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vit-bs-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.vit-d {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vit-d.png) no-repeat;
+  left: 0;
+  bottom: 80px;
+  width: 136px;
+  height: 136px;
+}
+
+.wpr-macro-micro .bubbles label.vit-d:hover,
+.wpr-macro-micro .bubbles label.vit-d.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vit-d-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.calcium {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/calcium.png) no-repeat;
+  left: 140px;
+  bottom: 60px;
+  width: 171px;
+  height: 171px;
+}
+
+.wpr-macro-micro .bubbles label.calcium:hover,
+.wpr-macro-micro .bubbles label.calcium.active  {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/calcium-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.magnesium {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/magnesium.png) no-repeat;
+  left: 510px;
+  bottom: 80px;
+  width: 184px;
+  height: 184px;
+}
+
+.wpr-macro-micro .bubbles label.magnesium:hover,
+.wpr-macro-micro .bubbles label.magnesium.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/magnesium-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.zinc {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/zinc.png) no-repeat;
+  left: 0;
+  bottom: 80px;
+  width: 138px;
+  height: 138px;
+}
+
+.wpr-macro-micro .bubbles label.zinc:hover,
+.wpr-macro-micro .bubbles label.zinc.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/zinc-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.vitamin-a {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vitamin-a.png) no-repeat;
+  left: 190px;
+  bottom: 80px;
+  width: 142px;
+  height: 142px;
+}
+
+.wpr-macro-micro .bubbles label.vitamin-a:hover,
+.wpr-macro-micro .bubbles label.vitamin-a.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/vitamin-a-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles  label.dha {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/dha.png) no-repeat;
+  left: 50px;
+  bottom: 0px;
+  width: 156px;
+  height: 156px;
+}
+
+.wpr-macro-micro .bubbles label.dha:hover,
+.wpr-macro-micro .bubbles label.dha.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/dha-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.gar {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/gar.png) no-repeat;
+  left: 170px;
+  bottom: -20px;
+  width: 157px;
+  height: 153px;
+}
+
+.wpr-macro-micro .bubbles label.gar:hover,
+.wpr-macro-micro .bubbles label.gar.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/gar-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.protein {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/protein.png) no-repeat;
+  left: 510px;
+  bottom: 80px;
+  width: 147px;
+  height: 148px;
+}
+
+.wpr-macro-micro .bubbles label.protein:hover,
+.wpr-macro-micro .bubbles label.protein.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/protein-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.folate2 {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/folate2.png) no-repeat;
+  left: 560px;
+  bottom: 10px;
+  width: 131px;
+  height: 131px;
+}
+
+.wpr-macro-micro .bubbles label.folate2:hover,
+.wpr-macro-micro .bubbles label.folate2.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/folate2-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.probiotic {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/probiotic.png) no-repeat;
+  left: 70px;
+  bottom: 140px;
+  width: 157px;
+  height: 157px;
+}
+
+.wpr-macro-micro .bubbles label.probiotic:hover,
+.wpr-macro-micro .bubbles label.probiotic.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/probiotic-hv.png) no-repeat;
+}
+
+.wpr-macro-micro .bubbles label.fibre {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/fibre.png) no-repeat;
+  left: 470px;
+  bottom: 140px;
+  width: 156px;
+  height: 156px;
+}
+
+.wpr-macro-micro .bubbles label.fibre:hover,
+.wpr-macro-micro .bubbles label.fibre.active {
+  background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/fibre-hv.png) no-repeat;
+}
+
+/* Bubble descriptions positions */
+.wpr-macro-micro .bubbles label.folate ~ .desc {
+  left: 45px;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.iron ~ .desc {
+  left: 200px;
+  bottom: 200px;
+}
+
+.wpr-macro-micro .bubbles label.vit-b12 ~ .desc {
+  left: 555px;
+  bottom: 195px;
+}
+
+.wpr-macro-micro .bubbles label.fats ~ .desc {
+  left: 0;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.carbohydrate ~ .desc {
+  left: 210px;
+  bottom: 225px;
+}
+
+.wpr-macro-micro .bubbles label.vit-bs ~ .desc {
+  left: 560px;
+  bottom: 210px;
+}
+
+.wpr-macro-micro .bubbles label.vit-d ~ .desc {
+  left: 40px;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.calcium ~ .desc {
+  left: 198px;
+  bottom: 205px;
+}
+
+.wpr-macro-micro .bubbles label.magnesium ~ .desc {
+  left: 575px;
+  bottom: 240px;
+}
+
+.wpr-macro-micro .bubbles label.zinc ~ .desc {
+  left: 35px;
+  bottom: 190px;
+}
+
+.wpr-macro-micro .bubbles label.vitamin-a ~ .desc {
+  left: 235px;
+  bottom: 200px;
+}
+
+.wpr-macro-micro .bubbles label.dha ~ .desc {
+  left: 100px;
+  bottom: 140px;
+}
+
+.wpr-macro-micro .bubbles label.gar ~ .desc {
+  left: 220px;
+  bottom: 110px;
+}
+
+.wpr-macro-micro .bubbles label.protein ~ .desc {
+  left: 560px;
+  bottom: 205px;
+}
+
+.wpr-macro-micro .bubbles label.folate2 ~ .desc {
+  left: 550px;
+  bottom: 115px;
+}
+
+.wpr-macro-micro .bubbles label.folate2 ~ .desc .arrow {
+  margin-left: 65px;
+}
+
+.wpr-macro-micro .bubbles label.probiotic ~ .desc {
+  left: 120px;
+  bottom: 270px;
+}
+
+.wpr-macro-micro .bubbles label.fibre ~ .desc {
+  left: 520px;
+  bottom: 275px;
+}
+
+.wpr-macro-micro .bubbles .desc.purple .content{
+  background: #965a94;
+}
+
+.wpr-macro-micro .bubbles .desc.purple .arrow {
+  border-top-color: #965a94;
+}
+
+.wpr-macro-micro .bubbles .desc.pink .content{
+  background: #e8618d;
+}
+
+.wpr-macro-micro .bubbles .desc.pink .arrow {
+  border-top-color: #e8618d;
+}
+
+.wpr-macro-micro .bubbles .desc {
+  display: none;
+  position: absolute;
+  width: 280px;
+  z-index: 5;
+}
+
+.wpr-macro-micro .bubbles .desc.active {
+  display: block;
+}
+
+.wpr-macro-micro .bubbles .desc .content {
+  background: #00819c;
+  padding: 15px;
+}
+
+.wpr-macro-micro .bubbles .desc .arrow {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #00819c;
+  width: 0;
+  height: 0;
+  margin-left: 15px;
+}
+
+.wpr-macro-micro .bubbles .desc h5 {
+  font-family: 'Barmeno', sans-serif;
+  font-weight: bold;
+}
+
+.wpr-macro-micro .bubbles .desc p,
+.wpr-macro-micro .bubbles .desc h5 {
+  color: white;
+  font-size: 11px;
+}
+
+.wpr-macro-micro .bubbles .desc p {
+  padding-top: 10px;
+}
+
+.wpr-macro-micro .mac-mic-desc p i {
+  font-size: 11px;
+  color: white;
+  font-style: italic;
+}
+
+.wpr-macro-micro .mac-mic-desc p.note {
+  font-style: normal;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.wpr-macro-micro .materna {
+  padding-top: 10px;
+}
+
+.wpr-macro-micro .materna .intro {
+  float: left;
+  width: 55%;
+}
+
+.wpr-macro-micro .materna h3 {
+  margin-top: 20px;
+}
+
+.wpr-macro-micro .materna .img {
+  float: right;
+  width: 44%;
+}
+
+.wpr-macro-micro .materna .cta-request-sample a {
+  background: url('http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/cta-request-sample.png') 0 0 no-repeat;
+  display: block;
+  margin-top: 15px;
+  text-indent: -999em;
+  width: 161px;
+  height: 40px;
+}
+
+.wpr-macro-micro .materna .cta-request-sample a:hover {
+  background-position: 0 -45px;
+}
+
+.wpr-macro-micro .backToTop{
+  background:url('http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/back-to-top.png')no-repeat center top;
+  width:162px;
+  height: 42px;
+  margin: 20px auto 0;
+  cursor:pointer
+}
+.wpr-macro-micro .backToTop:hover{
+  background:url('http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/back-to-top.png')no-repeat center bottom;
+}
+
+.desktop-hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+  .desktop-hidden {
+    display: none;
+  }
+
+  .wpr-macro-micro .wrapper {
+    width: 728px;
+    padding: 0 10px;
+  }
+
+  .wpr-macro-micro .title {
+    width: 60%;
+  }
+
+  .wpr-macro-micro .mac-mic-desc .tabs li {
+    margin-left: 13px;
+    height: 163px;
+    zoom: 0.9;
+    border-radius: 60px;
+  }
+
+  .wpr-macro-micro .bubbles .desc {
+    width: 210px;
+  }
+
+  .wpr-macro-micro .bubbles label.magnesium ~ .desc {
+    left: 515px;
+  }
+
+  .wpr-macro-micro .bubbles label.magnesium ~ .desc .arrow {
+    margin-left: 70px;
+  }
+
+  .wpr-macro-micro .bubbles label.folate2 ~ .desc {
+    left: 520px;
+  }
+
+  .wpr-macro-micro .bubbles label.folate2 ~ .desc .arrow {
+    margin-left: 95px;
+  }
+
+  .wpr-macro-micro .bubbles label.vit-b12 ~ .desc {
+    left: 525px;
+    bottom: 200px;
+  }
+
+  .wpr-macro-micro .bubbles label.vit-b12 ~ .desc .arrow {
+    margin-left: 80px;
+  }
+
+  .wpr-macro-micro .bubbles label.fats ~ .desc {
+    left: 40px;
+  }
+
+  .wpr-macro-micro .bubbles label.vit-bs ~ .desc {
+    left: 520px;
+  }
+
+  .wpr-macro-micro .bubbles label.vit-bs ~ .desc .arrow {
+    margin-left: 50px;
+  }
+
+  .wpr-macro-micro .bubbles label.protein ~ .desc {
+    left: 520px;
+  }
+
+  .wpr-macro-micro .bubbles label.protein ~ .desc .arrow {
+    margin-left: 50px;
+  }
+
+  .wpr-macro-micro .materna .img {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .desktop-hidden {
+    display: inherit;
+  }
+
+  .wpr-macro-micro .wrapper {
+    width: 94%;
+  }
+
+  .wpr-macro-micro .cta-get-sample a {
+    background: #ffe73b url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/cta-get-sample-mobile.png) right center no-repeat;
+    border-bottom: #9f98a1 solid 2px;
+    font-family: 'Gotham Rounded';
+    text-indent: inherit;
+    text-decoration: none;
+    text-align: center;
+    line-height: 43px;
+    width: 100%;
+    height: 43px;
+  }
+
+  .wpr-macro-micro .title {
+    margin-top: 25px;
+    width: 100%;
+    height: 120px;
+  }
+
+  .wpr-macro-micro .bg-diagram {
+    padding-bottom: 0;
+  }
+
+  .wpr-macro-micro .diagram-img .macro-img,
+  .wpr-macro-micro .diagram-img .micro-img {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .wpr-macro-micro .diagram-img .probiotic-img {
+    text-align: center;
+    position: inherit;
+  }
+
+  .wpr-macro-micro .bg-mac-mic-desc {
+    background: #e0d0e5 url('http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/bg-responsive.jpg') center bottom no-repeat;
+    background-size: 100%;
+    padding-top: 0;
+    height: 800px;
+  }
+
+  .wpr-macro-micro .mac-mic-desc {
+    padding-top: 20px;
+  }
+
+  .wpr-macro-micro .mac-mic-desc h3,
+  .wpr-macro-micro .mac-mic-desc h3 ~ p {
+    display: none;
+  }
+
+  .wpr-macro-micro .mac-mic-desc p i {
+    font-size: 14px;
+  }
+
+  .wpr-macro-micro .mac-mic-desc p.note {
+    font-style: normal;
+    font-size: 9px;
+    font-style: italic;
+  }
+
+  .wpr-macro-micro .macMicTabsSlide {
+    text-align: center;
+  }
+
+  .wpr-macro-micro .bubbles label ~ .desc {
+    display: none !important;
+  }
+
+  .wpr-macro-micro .desc-mobile {
+    background: rgba(48,41,74,0.8);
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 384px;
+    z-index: 10;
+  }
+
+  .wpr-macro-micro .desc-mobile .btn-close {
+    background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/btn-close.png) no-repeat;
+    text-indent: -999em;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+  }
+
+  .wpr-macro-micro .desc-mobile li {
+    display: block;
+    padding: 40px 20px 20px;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-pager {
+    display: none;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction a {
+    background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/btn-nxt-prv.png) no-repeat;
+    display: inline-block;
+    margin: 0 5px;
+    text-indent: -999em;
+    width: 17px;
+    height: 30px;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction a.bx-prev {
+    background-position: left top;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction a.bx-next {
+    background-position: right top;
+  }
+
+  .wpr-macro-micro .desc-mobile * {
+    color: white;
+  }
+
+  .wpr-macro-micro .desc-mobile ul {
+    margin-left: 0
+  }
+
+  .wpr-macro-micro .desc-mobile li.each-bubble {
+    display: block;
+  }
+
+  .wpr-macro-micro .macMicSlide .bx-pager {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .wpr-macro-micro .bx-pager-item {
+    display: inline-block;
+    margin: 0 6px;
+  }
+
+  .wpr-macro-micro .macMicSlide .bx-pager-link {
+    background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/dots.png) 0 0 no-repeat;
+    display: block;
+    text-indent: -999em;
+    width: 12px;
+    height: 12px;
+  }
+
+  .wpr-macro-micro .macMicSlide .bx-pager-link.active {
+    background-position: left bottom;
+  }
+
+  .wpr-macro-micro .bubbles label {
+    zoom: 0.5;
+  }
+
+  .wpr-macro-micro .bubbles label.folate {
+    left: -10px;
+    bottom: 250px;
+  }
+
+  .wpr-macro-micro .bubbles label.iron {
+    left: 130px;
+    bottom: 230px;
+  }
+
+  .wpr-macro-micro .bubbles  label.vit-b12 {
+    right: 90px;
+    bottom: 240px;
+  }
+
+  .wpr-macro-micro .bubbles label.fats {
+    bottom: 250px;
+  }
+
+  .wpr-macro-micro .bubbles label.carbohydrate {
+    bottom: 220px;
+    left: 115px;
+  }
+
+  .wpr-macro-micro .bubbles  label.vit-bs {
+    bottom: 250px;
+  }
+
+  .wpr-macro-micro .bubbles label.vit-d {
+    bottom: 250px;
+  }
+
+  .wpr-macro-micro .bubbles label.calcium {
+    bottom: 230px;
+    left: 130px;
+  }
+
+  .wpr-macro-micro .bubbles  label.magnesium {
+    bottom: 230px;
+  }
+
+  .wpr-macro-micro .bubbles label.zinc {
+    bottom: 260px;
+  }
+
+  .wpr-macro-micro .bubbles label.vitamin-a {
+    right: 130px;
+    bottom: 250px;
+  }
+
+  .wpr-macro-micro .bubbles label.gar {
+    left: 130px;
+    bottom: 180px;
+  }
+
+  .wpr-macro-micro .bubbles label.dha {
+    left: 30px;
+    bottom: 120px;
+  }
+
+  .wpr-macro-micro .bubbles label.protein {
+    right: 20px;
+    bottom: 250px;
+  }
+
+  .wpr-macro-micro .bubbles label.folate2 {
+    right: 80px;
+    bottom: 160px;
+  }
+
+  .wpr-macro-micro .bubbles label.fibre {
+    left: 510px;
+    bottom: 340px;
+  }
+
+  .wpr-macro-micro .bubbles label.probiotic {
+    left: 70px;
+    bottom: 340px;
+  }
+
+  .wpr-macro-micro .materna .intro {
+    float: none;
+    width: 100%;
+  }
+
+  .wpr-macro-micro .materna .img {
+    margin-top: -40px;
+    width: 50%;
+  }
+}
+
+
+@media only screen and (max-width: 479px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .desktop-hidden {
+    display: inherit;
+  }
+
+  .wpr-macro-micro .wrapper {
+    width: 94%;
+  }
+
+  .wpr-macro-micro * {
+    font-size: 14px;
+  }
+
+  .wpr-macro-micro p {
+    padding-top: 10px;
+  }
+
+  .wpr-macro-micro .note p {
+    font-size: 11px;
+  }
+
+  .wpr-macro-micro .cta-get-sample a {
+    background: #ffe73b url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/cta-get-sample-mobile.png) right center no-repeat;
+    border-bottom: #9f98a1 solid 2px;
+    font-family: 'Gotham Rounded';
+    font-size: 10px;
+    text-indent: inherit;
+    text-decoration: none;
+    text-align: center;
+    line-height: 43px;
+    width: 100%;
+    height: 43px;
+  }
+
+  .wpr-macro-micro .title {
+    margin-top: 25px;
+    width: 100%;
+    height: 85px;
+  }
+
+  .wpr-macro-micro .bg-diagram {
+    padding-bottom: 0;
+  }
+
+  .wpr-macro-micro .diagram-img .macro-img,
+  .wpr-macro-micro .diagram-img .micro-img {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .wpr-macro-micro .diagram-img .probiotic-img {
+    text-align: center;
+    position: inherit;
+  }
+
+  .wpr-macro-micro .bg-mac-mic-desc {
+    background: #e0d0e5 url('http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/bg-responsive.jpg') center bottom no-repeat;
+    background-size: 100%;
+    padding-top: 0;
+    height: 600px;
+  }
+
+  .wpr-macro-micro .mac-mic-desc {
+    padding-top: 20px;
+    position: relative;
+    height: 580px;
+  }
+
+  .wpr-macro-micro .mac-mic-desc h3,
+  .wpr-macro-micro .mac-mic-desc h3 ~ p {
+    display: none;
+  }
+
+  .wpr-macro-micro .mac-mic-desc p i {
+    font-size: 14px;
+  }
+
+  .wpr-macro-micro .mac-mic-desc p.note {
+    font-style: normal;
+    font-size: 11px;
+    font-style: italic;
+  }
+
+  .wpr-macro-micro .mac-mic-desc h4 {
+    font-size: 18px;
+  }
+
+  .wpr-macro-micro .mac-mic-desc .tab-content p,
+  .wpr-macro-micro .mac-mic-desc .tab-content p strong {
+    font-size: 12px;
+    padding-top: 5px;
+    line-height: 16px;
+  }
+
+  .wpr-macro-micro .macMicTabsSlide {
+    text-align: center;
+  }
+
+  .wpr-macro-micro .bubbles label ~ .desc {
+    display: none !important;
+  }
+
+  .wpr-macro-micro .desc-mobile {
+    background: rgba(48,41,74,0.8);
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 384px;
+    z-index: 10;
+  }
+
+  .wpr-macro-micro .desc-mobile .btn-close {
+    background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/btn-close.png) no-repeat;
+    text-indent: -999em;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+  }
+
+  .wpr-macro-micro .desc-mobile li {
+    display: block;
+    padding: 40px 20px 20px;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-pager {
+    display: none;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction a {
+    background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/btn-nxt-prv.png) no-repeat;
+    display: inline-block;
+    margin: 0 5px;
+    text-indent: -999em;
+    width: 17px;
+    height: 30px;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction a.bx-prev {
+    background-position: left top;
+  }
+
+  .wpr-macro-micro .desc-mobile .bx-controls-direction a.bx-next {
+    background-position: right top;
+  }
+
+  .wpr-macro-micro .desc-mobile * {
+    color: white;
+  }
+
+  .wpr-macro-micro .desc-mobile ul {
+    margin-left: 0
+  }
+
+  .wpr-macro-micro .desc-mobile li.each-bubble {
+    display: block;
+  }
+
+  .wpr-macro-micro .macMicSlide .bx-pager {
+    text-align: center;
+    margin: 10px 0 5px;
+  }
+
+  .wpr-macro-micro .bx-pager-item {
+    display: inline-block;
+    margin: 0 6px;
+  }
+
+  .wpr-macro-micro .macMicSlide .bx-pager-link {
+    background: url(http://www.anmum.com.my/wp-content/themes/anmum/img/happenings/macro-micro/dots.png) 0 0 no-repeat;
+    display: block;
+    text-indent: -999em;
+    width: 12px;
+    height: 12px;
+  }
+
+  .wpr-macro-micro .macMicSlide .bx-pager-link.active {
+    background-position: left bottom;
+  }
+
+  .wpr-macro-micro .bubbles label {
+    zoom: 0.4;
+  }
+
+  .wpr-macro-micro .bubbles label.folate {
+    left: 0;
+    bottom: 180px;
+  }
+
+  .wpr-macro-micro .bubbles label.iron {
+    left: 110px;
+    bottom: 160px;
+  }
+
+  .wpr-macro-micro .bubbles  label.vit-b12 {
+    left: 460px;
+    bottom: 160px;
+  }
+
+  .wpr-macro-micro .bubbles label.fats {
+    bottom: 180px;
+  }
+
+  .wpr-macro-micro .bubbles label.carbohydrate {
+    bottom: 150px;
+    left: 95px;
+  }
+
+  .wpr-macro-micro .bubbles  label.vit-bs {
+    bottom: 180px;
+    left: 460px;
+  }
+
+  .wpr-macro-micro .bubbles label.vit-d {
+    bottom: 180px;
+  }
+
+  .wpr-macro-micro .bubbles label.calcium {
+    bottom: 160px;
+    left: 100px;
+  }
+
+  .wpr-macro-micro .bubbles  label.magnesium {
+    bottom: 160px;
+    left: 450px;
+  }
+
+  .wpr-macro-micro .bubbles label.zinc {
+    bottom: 180px;
+  }
+
+  .wpr-macro-micro .bubbles label.vitamin-a {
+    left: 420px;
+    bottom: 200px;
+  }
+
+  .wpr-macro-micro .bubbles label.gar {
+    left: 120px;
+    bottom: 120px;
+  }
+
+  .wpr-macro-micro .bubbles label.dha {
+    left: 30px;
+    bottom: 60px;
+  }
+
+  .wpr-macro-micro .bubbles label.protein {
+    left: 520px;
+    bottom: 190px;
+  }
+
+  .wpr-macro-micro .bubbles label.folate2 {
+    left: 480px;
+    bottom: 110px;
+  }
+
+  .wpr-macro-micro .bubbles label.fibre {
+    left: 440px;
+    bottom: 240px;
+  }
+
+  .wpr-macro-micro .bubbles label.probiotic {
+    left: 30px;
+    bottom: 240px;
+  }
+
+  .wpr-macro-micro .materna .intro {
+    float: none;
+    width: 100%;
+  }
+
+  .wpr-macro-micro .materna .img {
+    margin-top: -60px;
+    width: 50%;
+  }
+
+  .wpr-macro-micro .materna h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .wpr-macro-micro .materna p,
+  .wpr-macro-micro .materna p strong {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
